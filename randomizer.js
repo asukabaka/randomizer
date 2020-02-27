@@ -6,7 +6,7 @@ function setup() {
 	createCanvas(600,600);
 	background(200);
 
-	console.log(foods[3]);
+	console.log(foods[0]);
 }
 
 function draw() {
