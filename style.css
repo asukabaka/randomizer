@@ -1,7 +1,57 @@
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+/*This code works because there is a giant gradient and this keyframe animation slowly moves it back and forth to make that gradual change.*/
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
 html, body {
   margin: 0;
   padding: 0;
 }
 canvas {
   display: block;
+}
+
+.background {
+  width: 100wh;
+height: 100vh;
+color: white;
+background: linear-gradient(-45deg, #ffcc80, #ffcc80, #00353a, #00e9ff);
+background-size: 400% 400%;
+-webkit-animation: Gradient 20s ease infinite;
+-moz-animation: Gradient 20s ease infinite;
+animation: Gradient 20s ease infinite;
+position: relative;
 }
