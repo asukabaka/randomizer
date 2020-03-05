@@ -19,7 +19,7 @@ let animating = false;
 let foodpics = [];
 
 function preload(){
-	for (let i = 0; i <= 15; i++){
+	for (let i = 0; i <= 3; i++){
 		foodpics[i] = loadImage(`images/food_${i}.jpg`)
 	}
 }
