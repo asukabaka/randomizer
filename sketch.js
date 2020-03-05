@@ -28,7 +28,7 @@ function preload(){
 }
 
 function setup() {
-	createCanvas(600,600);
+	createCanvas(800,800);
 	textSize(32);
 	textAlign(CENTER);
 	background(200);
@@ -40,7 +40,7 @@ function setup() {
 	text("are you hungry", width / 2, height / 2);
 
 	 button = createButton("are you hungry");
-	 button.mousePressed();
+	 button.mousePressed(buttonPressed);
 	 button.class("randomizerButton");
 }
 
@@ -67,10 +67,10 @@ function randomizer(){
 
 
 	if (foods[0]){
-		background(random(200, 255));
 		randomIndex = int(random(foods.length));
-		text(`${foods[randomIndex].name}'s favorite topping inspect ${foods[randomIndex].topping}`, width / 2, height - 50);
 		image(random(foodpics), width / 2, height / 2);
+		fill(255,255,255);
+		text(`${foods[randomIndex].name}'s favorite topping inspect ${foods[randomIndex].topping}`, width / 2, 50);
 		foods.splice(randomIndex, 1);
 	} else {
 		background(random(200,255));
@@ -78,7 +78,7 @@ function randomizer(){
 	}
 }
 
-function mousePressed(){
+function buttonPressed(){
 	animating = true;
 	setTimeout(randomizer, 2000);
 }
