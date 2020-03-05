@@ -5,29 +5,37 @@ let foods = [{
 }, {
 
 name: "ramen",
-topping: "greenonions"
+topping: "green onions"
 },{
-	name: "seafoodpancake",
-	topping: "moreseafood"
+	name: "seafood pancake",
+	topping: "more seafood"
 },{
 	name: "kimchi",
-	topping: "seasemeseeds"
+	topping: "seaseme seeds"
 }];
 
 let randomIndex;
 let animating = false;
+let foodpics = [];
+
+function preload(){
+	for (let i = 0; i <= 15; i++){
+		foodpics[i] = loadImage(`images/food_${i}.jpg`)
+	}
+}
 
 function setup() {
 	createCanvas(600,600);
 	background(200);
 
 	console.log(foods[3]);
+	console.log(foodpics);
 }
 
 function draw() {
 
 	if(animating == true){
-		ellipse(random(width), random(height), random(50, 200));
+		image(foodpics[1], 0, 0);
 	}
 
 }
