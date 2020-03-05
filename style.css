@@ -55,3 +55,8 @@ background-size: 400% 400%;
 animation: Gradient 20s ease infinite;
 position: relative;
 }
+
+.randomizerButton{
+  padding: 20px;
+  background: orange;
+}
