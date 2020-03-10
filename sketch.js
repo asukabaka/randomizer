@@ -39,7 +39,7 @@ function setup() {
 
 	text("explore different Korean foods :-)", width / 2, height / 2);
 
-	 button = createButton("Click here!");
+	 button = createButton("Try a new dish ~");
 	 button.mousePressed(buttonPressed);
 	 button.class("randomizerButton");
 }
