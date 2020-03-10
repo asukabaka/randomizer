@@ -22,7 +22,6 @@ let button;
 
 
 function preload(){
-	background('rgba(255,255,255,.2)');
 	for (let i = 0; i <= 3; i++){
 		foodpics[i] = loadImage(`images/food_${i}.jpg`)
 	}
