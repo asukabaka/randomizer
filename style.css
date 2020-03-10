@@ -39,6 +39,14 @@
 html, body {
   margin: 0;
   padding: 0;
+  margin: 0;
+display: flex;
+
+/* This centers our sketch horizontally. */
+justify-content: center;
+
+/* This centers our sketch vertically. */
+align-items: center;
 }
 canvas {
   display: block;
@@ -48,15 +56,15 @@ canvas {
   width: 100wh;
 height: 100vh;
 color: white;
-background: linear-gradient(-45deg, #ffcc80, #ffcc80, #00353a, #00e9ff);
-background-size: 400% 400%;
--webkit-animation: Gradient 20s ease infinite;
--moz-animation: Gradient 20s ease infinite;
-animation: Gradient 20s ease infinite;
+background: url("../images/bamboo.jpg") 50% no-repeat;
+background-size: cover;
 position: relative;
 }
 
 .randomizerButton{
   padding: 20px;
   background: orange;
+}
+
+.container{
 }

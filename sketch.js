@@ -8,7 +8,7 @@ name: "ramen",
 topping: "green onions"
 },{
 	name: "seafood pancake",
-	topping: "more seafood"
+	topping: "soysauce"
 },{
 	name: "kimchi",
 	topping: "seaseme seeds"
@@ -22,24 +22,25 @@ let button;
 
 
 function preload(){
+	background('rgba(255,255,255,.2)');
 	for (let i = 0; i <= 3; i++){
 		foodpics[i] = loadImage(`images/food_${i}.jpg`)
 	}
 }
 
 function setup() {
-	createCanvas(800,800);
+	createCanvas(windowWidth*0.7,windowHeight*0.7);
+	background('rgba(255,255,255,.2)');
 	textSize(32);
 	textAlign(CENTER);
-	background(200);
 	imageMode(CENTER);
 	frameRate(8);
 	console.log(foods[3]);
 	console.log(foodpics);
 
-	text("are you hungry", width / 2, height / 2);
+	text("explore different Korean foods :-)", width / 2, height / 2);
 
-	 button = createButton("are you hungry");
+	 button = createButton("Click here!");
 	 button.mousePressed(buttonPressed);
 	 button.class("randomizerButton");
 }
@@ -61,16 +62,14 @@ function randomizer(){
 
 	animating = false;
 	if (foods[0]) {
-		clear();
+		// clear();
 
 	}
 
 
 	if (foods[0]){
-		randomIndex = int(random(foods.length));
-		image(random(foodpics), width / 2, height / 2);
 		fill(255,255,255);
-		text(`${foods[randomIndex].name}'s favorite topping inspect ${foods[randomIndex].topping}`, width / 2, 50);
+		text(` Try ${foods[0].name} with ${foods[0].topping}`, width / 2, 50);
 		foods.splice(randomIndex, 1);
 	} else {
 		background(random(200,255));
