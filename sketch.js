@@ -57,15 +57,19 @@ function setup() {
 	 button = createButton("Try a new dish ~");
 	 //button with function buttonPressed
 	 button.mousePressed(buttonPressed);
-	 //
+	 //create a class called randomizer button
 	 button.class("randomizerButton");
 }
 
 function draw() {
 
+	// if else statement to check if animation has run
 	if(animating == true){
+		//clear so it stops animating
 		clear();
+		//pull image from array and center in middle
 		image(foodpics[imageCounter], width/2, height/2);
+		//incrementing if the counter is less than food pics add an image
 		if (imageCounter < foodpics.length - 1){
 		imageCounter++;} else {
 			imageCounter = 0;
@@ -76,12 +80,17 @@ function draw() {
 
 function randomizer(){
 
+	//animation starts at false so no animation
 	animating = false;
 	if (foods[0]) {
+		// start with no image
 		clear();
 		if(animating == true){
+			//clear to clear the previous image
 		clear();
+		//center image in middle of screen
 		image(foodpics[imageCounter], width/2, height/2);
+		//add to image counter if its under the amount of images in array
 		if (imageCounter < foodpics.length - 1){
 		imageCounter++;} else {
 			imageCounter = 0;
@@ -93,6 +102,7 @@ function randomizer(){
 
 	if (foods[0]){
 		fill(255,255,255);
+		//display text with information from the array centered 
 		text(` Try ${foods[0].name} with ${foods[0].topping}`, width / 2, 50);
 		foods.splice(randomIndex, 1);
 	} else {
