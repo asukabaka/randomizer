@@ -102,16 +102,20 @@ function randomizer(){
 
 	if (foods[0]){
 		fill(255,255,255);
-		//display text with information from the array centered 
+		//display text with information from the array centered
 		text(` Try ${foods[0].name} with ${foods[0].topping}`, width / 2, 50);
 		foods.splice(randomIndex, 1);
 	} else {
+		//once you've tried all the foods show this slide
 		background(random(200,255));
 		text("nothing left!", 50, 50);
 	}
 }
 
+// create a function for a button
 function buttonPressed(){
+	// start animation
 	animating = true;
+	//timeout adds a nice delay
 	setTimeout(randomizer, 2000);
 }
